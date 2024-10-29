@@ -75,10 +75,10 @@ def play_n_games(n: int, data: str, initial_seed: int = 0, batched: bool = False
         os.makedirs(os.path.join(data,'tricks_ties'))
 
     if batched: 
-        batch_cards = np.empty((8,8))
-        batch_tricks = np.empty((8,8))
-        batch_cards_ties = np.empty((8,8))
-        batch_tricks_ties = np.empty((8,8))
+        batch_cards = np.zeros((8,8))
+        batch_tricks = np.zeros((8,8))
+        batch_cards_ties = np.zeros((8,8))
+        batch_tricks_ties = np.zeros((8,8))
 
         for i in range(n): # runs n games
             deck = shuffle_deck(seed=initial_seed + i)
